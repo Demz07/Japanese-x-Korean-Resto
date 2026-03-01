@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JAKOR Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <header class="dashboard-header">
+        <div class="header-left">
+          <h1>📊 JAKOR Dashboard</h1>
+          <p class="tagline">Sales Analytics & Performance</p>
+        </div>
+        <div class="header-right">
+          <div class="day-selector">
+            <label for="daySelect">Select Day:</label>
+            <select id="daySelect">
+              <option value="day1">Day 1</option>
+              <option value="day2">Day 2</option>
+            </select>
+          </div>
+        </div>
+      </header>
+
+      <div class="dashboard-content">
+        <section class="stats-section">
+          <div class="stat-card orders-card">
+            <div class="stat-icon">📦</div>
+            <div class="stat-info">
+              <span class="stat-label">Total Orders</span>
+              <span class="stat-value" id="totalOrders">0</span>
+            </div>
+          </div>
+
+          <div class="stat-card revenue-card">
+            <div class="stat-icon">💰</div>
+            <div class="stat-info">
+              <span class="stat-label">Total Revenue</span>
+              <span class="stat-value" id="totalRevenue">₱0</span>
+            </div>
+          </div>
+
+          <div class="stat-card avg-card">
+            <div class="stat-icon">📈</div>
+            <div class="stat-info">
+              <span class="stat-label">Avg Order Value</span>
+              <span class="stat-value" id="avgOrder">₱0</span>
+            </div>
+          </div>
+
+          <div class="stat-card top-card">
+            <div class="stat-icon">⭐</div>
+            <div class="stat-info">
+              <span class="stat-label">Top Selling Item</span>
+              <span class="stat-value" id="topItem">--</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="charts-section">
+          <div class="chart-card">
+            <h3>🥧 Orders by Category</h3>
+            <div class="chart-container">
+              <canvas id="pieChart"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card">
+            <h3>📊 Top Selling Items</h3>
+            <div class="chart-container">
+              <canvas id="barChart"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card full-width">
+            <h3>📈 Hourly Sales Trend</h3>
+            <div class="chart-container">
+              <canvas id="lineChart"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <section class="details-section">
+          <div class="details-card">
+            <h3>🏆 Top Selling Items</h3>
+            <div class="top-items-list" id="topItemsList">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <div class="details-card">
+            <h3>🎯 Active Strategies</h3>
+            <div class="strategies-list" id="strategiesList">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+        </section>
+
+        <section class="insights-section">
+          <div class="insights-card">
+            <h3>💡 Day Insights</h3>
+            <p id="dayInsight">Loading insights...</p>
+          </div>
+        </section>
+      </div>
+
+      <footer class="dashboard-footer">
+        <a href="index.html" class="back-btn">← Back to Menu</a>
+      </footer>
+    </div>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>
