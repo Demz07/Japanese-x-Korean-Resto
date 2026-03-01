@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Japanese x Korean Resto - Menu</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="landing-page" id="landingPage">
+      <div class="hero">
+        <a href="#" class="order-btn" id="orderBtn">Order Now! 🔥</a>
+      </div>
+    </div>
+
+    <div class="menu-page" id="menuPage" style="display: none">
+      <div class="manage-menu-section">
+        <button class="manage-menu-btn" id="manageMenuBtn">
+          ⚙️ Manage Strategies
+        </button>
+        <div class="manage-options" id="manageOptions" style="display: none;">
+          <div class="strategy-section">
+            <h3>🎯 Strategy Options</h3>
+            
+            <div class="strategy-item">
+              <div class="strategy-header">
+                <span class="strategy-label">🔥 Combo Deals Mode</span>
+                <label class="switch">
+                  <input type="checkbox" id="comboToggle">
+                  <span class="slider"></span>
+                </label>
+              </div>
+              <p class="strategy-desc">Activate combo meals to beat the competition!</p>
+            </div>
+
+            <div class="strategy-item">
+              <div class="strategy-header">
+                <span class="strategy-label">💰 Volume Discount</span>
+                <label class="switch">
+                  <input type="checkbox" id="discountToggle">
+                  <span class="slider"></span>
+                </label>
+              </div>
+              <div class="strategy-inputs">
+                <div class="input-group">
+                  <label>Target Price (₱)</label>
+                  <input type="number" id="targetPrice" placeholder="e.g., 500" min="0">
+                </div>
+                <div class="input-group">
+                  <label>Discount (%)</label>
+                  <input type="number" id="discountPercent" placeholder="e.g., 10" min="0" max="100">
+                </div>
+              </div>
+              <p class="strategy-desc">Customer gets discount when order reaches target price!</p>
+            </div>
+
+            <div class="strategy-item">
+              <div class="strategy-header">
+                <span class="strategy-label">🍱 Category Discount</span>
+                <label class="switch">
+                  <input type="checkbox" id="categoryDiscountToggle">
+                  <span class="slider"></span>
+                </label>
+              </div>
+              <div class="strategy-inputs">
+                <div class="input-group">
+                  <label>Categories</label>
+                  <div class="checkbox-list">
+                    <label class="checkbox-item">
+                      <input type="checkbox" value="japanese" class="category-checkbox">
+                      <span>Japanese</span>
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" value="korean" class="category-checkbox">
+                      <span>Korean</span>
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" value="japaneseFoods" class="category-checkbox">
+                      <span>Japanese Foods</span>
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" value="japaneseBeverages" class="category-checkbox">
+                      <span>Japanese Beverages</span>
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" value="koreanFoods" class="category-checkbox">
+                      <span>Korean Foods</span>
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" value="koreanBeverages" class="category-checkbox">
+                      <span>Korean Beverages</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label>Discount (%)</label>
+                  <input type="number" id="categoryDiscountPercent" placeholder="e.g., 15" min="0" max="100">
+                </div>
+              </div>
+              <p class="strategy-desc">Discount applies when ordering from selected category only!</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-container">
+        <div class="menu-content">
+          <header class="header">
+            <h1>JAKOR: Japanese x Korean Resto</h1>
+            <p class="tagline">Special Food and Beverages MENU</p>
+          </header>
+
+          <div class="menu-sections">
+          <section class="menu-category">
+            <h2 class="category-title japanese" id="japaneseTitle">🍣 Japanese Menu</h2>
+
+            <div class="subsection">
+              <h3 class="subsection-title" id="japaneseFoodsTitle">🍜 Foods</h3>
+              <div class="items-grid" id="japaneseFoods">
+                <div class="menu-item" data-name="Sushi" data-price="149" data-category="japaneseFoods">
+                  <div class="item-image">
+                    <img
+                      src="images/Japanese/Japanese Foods/sushi.jpg"
+                      alt="Sushi"
+                      onerror="
+                        this.src = 'https://via.placeholder.com/150?text=Sushi'
+                      "
+                    />
+                  </div>
+                  <div class="item-info">
+                    <h4>Sushi</h4>
+                    <p class="description">Fresh & Precise</p>
+                    <div class="item-footer">
+                      <span class="price">₱149</span>
+                      <button class="add-btn">Add to Order</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-item" data-name="Ramen" data-price="129" data-category="japaneseFoods">
+                  <div class="item-image">
+                    <img
+                      src="images/Japanese/Japanese Foods/ramen.jpg"
+                      alt="Ramen"
+                      onerror="
+                        this.src = 'https://via.placeholder.com/150?text=Ramen'
+                      "
+                    />
+                  </div>
+                  <div class="item-info">
+                    <h4>Ramen</h4>
+                    <p class="description">Deep Umami Broth</p>
+                    <div class="item-footer">
+                      <span class="price">₱129</span>
+                      <button class="add-btn">Add to Order</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-item" data-name="Tempura" data-price="119" data-category="japaneseFoods">
+                  <div class="item-image">
+                    <img
+                      src="images/Japanese/Japanese Foods/tempura.jpg"
+                      alt="Tempura"
+                      onerror="
+                        this.src =
+                          'https://via.placeholder.com/150?text=Tempura'
+                      "
+                    />
+                  </div>
+                  <div class="item-info">
+                    <h4>Tempura</h4>
+                    <p class="description">Light & Crispy</p>
+                    <div class="item-footer">
+                      <span class="price">₱119</span>
+                      <button class="add-btn">Add to Order</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-item" data-name="Takoyaki" data-price="89" data-category="japaneseFoods">
+                  <div class="item-image">
+                    <img
+                      src="images/Japanese/Japanese Foods/takoyaki.jpg"
+                      alt="Takoyaki"
+                      onerror="
+                        this.src =
+                          'https://via.placeholder.com/150?text=Takoyaki'
+                      "
+                    />
+                  </div>
+                  <div class="item-info">
+                    <h4>Takoyaki</h4>
+                    <p class="description">Street-Style Savory</p>
+                    <div class="item-footer">
+                      <span class="price">₱89</span>
+                      <button class="add-btn">Add to Order</button>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="menu-item"
+                  data-name="Chicken Katsu"
+                  data-price="139"
+                  data-category="japaneseFoods"
+                >
+                  <div class="item-image">
+                    <img
+                      src="images/Japanese/Japanese Foods/katsu.jpg"
+                      alt="Chicken Katsu"
+                      onerror="
+                        this.src = 'https://via.placeholder.com/150?text=Katsu'
+                      "
+                    />
+                  </div>
+                  <div class="item-info">
+                    <h4>Chicken Katsu</h4>
+                    <p class="description">Golden & Crunchy</p>
+                    <div class="item-footer">
+                      <span class="price">₱139</span>
+                      <button class="add-btn">Add to Order</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <h3 class="subsection-title" id="japaneseBeveragesTitle">🍵 Beverages</h3>
+              <div class="items-grid" id="japaneseBeverages">
+                <div class="menu-item" data-name="Mugicha" data-price="59" data-category="japaneseBeverages">
+                  <div class="item-image">
+                    <img
+                      src="images/Japanese/Japanese Beverages/mugicha.jpg"
+                      alt="Mugicha"
+                      onerror="
+                        this.src =
+                          'https://via.placeholder.com/150?text=Mugicha'
+                      "
+                    />
+                  </div>
+                  <div class="item-info">
+                    <h4>Mugicha</h4>
+                    <p class="description">Savory Barley Tea</p>
+                    <div class="item-footer">
+                      <span class="price">₱59</span>
+                      <button class="add-btn">Add to Order</button>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="menu-item"
+                  data-name="Matcha Latte"
+                  data-price="79"
+                  data-category="japaneseBeverages"
+                >
+                  <div class="item-image">
+                    <img
+                      src="images/Japanese/Japanese Beverages/matcha.jpg"
+                      alt="Matcha Latte"
+                      onerror="
+                        this.src = 'https://via.placeholder.com/150?text=Matcha'
+                      "
+                    />
+                  </div>
+                  <div class="item-info">
+                    <h4>Matcha Latte</h4>
+                    <p class="description">Earthy & Smooth</p>
+                    <div class="item-footer">
+                      <span class="price">₱79</span>
+                      <button class="add-btn">Add to Order</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-item" data-name="Ramune" data-price="49" data-category="japaneseBeverages">
+                  <div class="item-image">
+                    <img
+                      src="images/Japanese/Japanese Beverages/ramune.jpg"
+                      alt="Ramune"
+                      onerror="
+                        this.src = 'https://via.placeholder.com/150?text=Ramune'
+                      "
+                    />
+                  </div>
+                  <div class="item-info">
+                    <h4>Ramune</h4>
+                    <p class="description">Fun Marble Soda</p>
+                    <div class="item-footer">
+                      <span class="price">₱49</span>
+                      <button class="add-btn">Add to Order</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-item" data-name="Maesil-cha" data-price="55" data-category="japaneseBeverages">
+                  <div class="item-image">
+                    <img
+                      src="images/Japanese/Japanese Beverages/maesil.jpg"
+                      alt="Maesil-cha"
+                      onerror="
+                        this.src =
+                          'https://via.placeholder.com/150?text=Maesil-cha'
+                      "
+                    />
+                  </div>
+                  <div class="item-info">
+                    <h4>Maesil-cha</h4>
+                    <p class="description">Sweet Plum Tea</p>
+                    <div class="item-footer">
+                      <span class="price">₱55</span>
+                      <button class="add-btn">Add to Order</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-item" data-name="Amazake" data-price="65" data-category="japaneseBeverages">
+                  <div class="item-image">
+                    <img
+                      src="images/Japanese/Japanese Beverages/amazake.jpg"
+                      alt="Amazake"
+                      onerror="
+                        this.src =
+                          'https://via.placeholder.com/150?text=Amazake'
+                      "
+                    />
+                  </div>
+                  <div class="item-info">
+                    <h4>Amazake</h4>
+                    <p class="description">Warm Sweet Rice</p>
+                    <div class="item-footer">
+                      <span class="price">₱65</span>
+                      <button class="add-btn">Add to Order</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="menu-category">
+            <h2 class="category-title korean" id="koreanTitle">🥢 Korean Menu</h2>
+
+            <div class="subsection">
+              <h3 class="subsection-title" id="koreanFoodsTitle">🍚 Foods</h3>
+              <div class="items-grid" id="koreanFoods">
+                  <div class="menu-item" data-name="Kimchi" data-price="59" data-category="koreanFoods">
+                  <div class="item-image">
+                    <img
+                      src="images/Korean/Korean Foods/kimchi.jpg"
+                      alt="Kimchi"
+                      onerror="
+                        this.src = 'https://via.placeholder.com/150?text=Kimchi'
+                      "
+                    />
+                  </div>
+                  <div class="item-info">
+                    <h4>Kimchi</h4>
+                    <p class="description">Fermented & Sharp</p>
+                    <div class="item-footer">
+                      <span class="price">₱59</span>
+                      <button class="add-btn">Add to Order</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-item" data-name="Bibimbap" data-price="139">
+                  <div class="item-image">
+                    <img
+                      src="images/Korean/Korean Foods/bibimbap.jpg"
+                      alt="Bibimbap"
+                      onerror="
+                        this.src =
+                          'https://via.placeholder.com/150?text=Bibimbap'
+                      "
+                    />
+                  </div>
+                  <div class="item-info">
+                    <h4>Bibimbap</h4>
+                    <p class="description">Balanced & Hearty</p>
+                    <div class="item-footer">
+                      <span class="price">₱139</span>
+                      <button class="add-btn">Add to Order</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-item" data-name="Bulgogi" data-price="159" data-category="koreanFoods">
+                  <div class="item-image">
+                    <img
+                      src="images/Korean/Korean Foods/bulgogi.jpg"
+                      alt="Bulgogi"
+                      onerror="
+                        this.src =
+                          'https://via.placeholder.com/150?text=Bulgogi'
+                      "
+                    />
+                  </div>
+                  <div class="item-info">
+                    <h4>Bulgogi</h4>
+                    <p class="description">Sweet & Savory</p>
+                    <div class="item-footer">
+                      <span class="price">₱159</span>
+                      <button class="add-btn">Add to Order</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-item" data-name="Tteokbokki" data-price="99" data-category="koreanFoods">
+                  <div class="item-image">
+                    <img
+                      src="images/Korean/Korean Foods/tteokbokki.jpg"
+                      alt="Tteokbokki"
+                      onerror="
+                        this.src =
+                          'https://via.placeholder.com/150?text=Tteokbokki'
+                      "
+                    />
+                  </div>
+                  <div class="item-info">
+                    <h4>Tteokbokki</h4>
+                    <p class="description">Chewy & Spicy</p>
+                    <div class="item-footer">
+                      <span class="price">₱99</span>
+                      <button class="add-btn">Add to Order</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-item" data-name="Japchae" data-price="129" data-category="koreanFoods">
+                  <div class="item-image">
+                    <img
+                      src="images/Korean/Korean Foods/japchae.jpg"
+                      alt="Japchae"
+                      onerror="
+                        this.src =
+                          'https://via.placeholder.com/150?text=Japchae'
+                      "
+                    />
+                  </div>
+                  <div class="item-info">
+                    <h4>Japchae</h4>
+                    <p class="description">Silky Glass Noodles</p>
+                    <div class="item-footer">
+                      <span class="price">₱129</span>
+                      <button class="add-btn">Add to Order</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <h3 class="subsection-title" id="koreanBeveragesTitle">🥤 Beverages</h3>
+              <div class="items-grid" id="koreanBeverages">
+                <div class="menu-item" data-name="Sikhye" data-price="55" data-category="koreanBeverages">
+                  <div class="item-image">
+                    <img
+                      src="images/Korean/Korean Beverages/sikhye.jpg"
+                      alt="Sikhye"
+                      onerror="
+                        this.src = 'https://via.placeholder.com/150?text=Sikhye'
+                      "
+                    />
+                  </div>
+                  <div class="item-info">
+                    <h4>Sikhye</h4>
+                    <p class="description">Sweet Rice Dessert Drink</p>
+                    <div class="item-footer">
+                      <span class="price">₱55</span>
+                      <button class="add-btn">Add to Order</button>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="menu-item"
+                  data-name="Banana Mat Uyu"
+                  data-price="49"
+                  data-category="koreanBeverages"
+                >
+                  <div class="item-image">
+                    <img
+                      src="images/Korean/Korean Beverages/banana_milk.jpg"
+                      alt="Banana Mat Uyu"
+                      onerror="
+                        this.src =
+                          'https://via.placeholder.com/150?text=Banana+Milk'
+                      "
+                    />
+                  </div>
+                  <div class="item-info">
+                    <h4>Banana Mat Uyu</h4>
+                    <p class="description">Creamy & Iconic</p>
+                    <div class="item-footer">
+                      <span class="price">₱49</span>
+                      <button class="add-btn">Add to Order</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-item" data-name="Omija-cha" data-price="55" data-category="koreanBeverages">
+                  <div class="item-image">
+                    <img
+                      src="images/Korean/Korean Beverages/omija.jpg"
+                      alt="Omija-cha"
+                      onerror="
+                        this.src = 'https://via.placeholder.com/150?text=Omija'
+                      "
+                    />
+                  </div>
+                  <div class="item-info">
+                    <h4>Omija-cha</h4>
+                    <p class="description">Five-Flavor Berry Tea</p>
+                    <div class="item-footer">
+                      <span class="price">₱55</span>
+                      <button class="add-btn">Add to Order</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-item" data-name="Bori-cha" data-price="45" data-category="koreanBeverages">
+                  <div class="item-image">
+                    <img
+                      src="images/Korean/Korean Beverages/boricha.jpg"
+                      alt="Bori-cha"
+                      onerror="
+                        this.src =
+                          'https://via.placeholder.com/150?text=Bori-cha'
+                      "
+                    />
+                  </div>
+                  <div class="item-info">
+                    <h4>Bori-cha</h4>
+                    <p class="description">Roasted & Refreshing</p>
+                    <div class="item-footer">
+                      <span class="price">₱45</span>
+                      <button class="add-btn">Add to Order</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-item" data-name="Milkis" data-price="45" data-category="koreanBeverages">
+                  <div class="item-image">
+                    <img
+                      src="images/Korean/Korean Beverages/milkis.jpg"
+                      alt="Milkis"
+                      onerror="
+                        this.src = 'https://via.placeholder.com/150?text=Milkis'
+                      "
+                    />
+                  </div>
+                  <div class="item-info">
+                    <h4>Milkis</h4>
+                    <p class="description">Sparkling Yogurt</p>
+                    <div class="item-footer">
+                      <span class="price">₱45</span>
+                      <button class="add-btn">Add to Order</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="combo-section" id="comboSection" style="display: none;">
+            <h2 class="combo-title">🎉 COMBO MEALS - SAVE MORE!</h2>
+            <p class="combo-subtitle">Get your favorite food + drink at a special price</p>
+            
+            <div class="combo-grid">
+              <div class="combo-item" data-name="Sushi Combo" data-price="179">
+                <div class="combo-images">
+                  <img src="images/Japanese/Japanese Foods/sushi.jpg" alt="Sushi" class="combo-food" onerror="this.src='https://via.placeholder.com/150?text=Sushi'">
+                  <img src="images/Japanese/Japanese Beverages/mugicha.jpg" alt="Mugicha" class="combo-drink" onerror="this.src='https://via.placeholder.com/150?text=Mugicha'">
+                </div>
+                <div class="combo-info">
+                  <h4>🍣 Sushi + Mugicha</h4>
+                  <p class="combo-includes">Includes: Sushi (1) + Mugicha (1)</p>
+                  <div class="combo-footer">
+                    <span class="combo-price">₱179</span>
+                    <span class="combo-save">Save ₱29!</span>
+                    <button class="add-btn">Add to Order</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="combo-item" data-name="Ramen Combo" data-price="159">
+                <div class="combo-images">
+                  <img src="images/Japanese/Japanese Foods/ramen.jpg" alt="Ramen" class="combo-food" onerror="this.src='https://via.placeholder.com/150?text=Ramen'">
+                  <img src="images/Japanese/Japanese Beverages/matcha.jpg" alt="Matcha" class="combo-drink" onerror="this.src='https://via.placeholder.com/150?text=Matcha'">
+                </div>
+                <div class="combo-info">
+                  <h4>🍜 Ramen + Matcha</h4>
+                  <p class="combo-includes">Includes: Ramen (1) + Matcha Latte (1)</p>
+                  <div class="combo-footer">
+                    <span class="combo-price">₱159</span>
+                    <span class="combo-save">Save ₱49!</span>
+                    <button class="add-btn">Add to Order</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="combo-item" data-name="Tempura Combo" data-price="149">
+                <div class="combo-images">
+                  <img src="images/Japanese/Japanese Foods/tempura.jpg" alt="Tempura" class="combo-food" onerror="this.src='https://via.placeholder.com/150?text=Tempura'">
+                  <img src="images/Japanese/Japanese Beverages/ramune.jpg" alt="Ramune" class="combo-drink" onerror="this.src='https://via.placeholder.com/150?text=Ramune'">
+                </div>
+                <div class="combo-info">
+                  <h4>🍤 Tempura + Ramune</h4>
+                  <p class="combo-includes">Includes: Tempura (1) + Ramune (1)</p>
+                  <div class="combo-footer">
+                    <span class="combo-price">₱149</span>
+                    <span class="combo-save">Save ₱19!</span>
+                    <button class="add-btn">Add to Order</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="combo-item" data-name="Takoyaki Combo" data-category="japaneseFoods">
+                <div class="combo-images">
+                  <img src="images/Japanese/Japanese Foods/takoyaki.jpg" alt="Takoyaki" class="combo-food" onerror="this.src='https://via.placeholder.com/150?text=Takoyaki'">
+                  <img src="images/Japanese/Japanese Beverages/amazake.jpg" alt="Amazake" class="combo-drink" onerror="this.src='https://via.placeholder.com/150?text=Amazake'">
+                </div>
+                <div class="combo-info">
+                  <h4>🐙 Takoyaki + Amazake</h4>
+                  <p class="combo-includes">Includes: Takoyaki (1) + Amazake (1)</p>
+                  <div class="combo-footer">
+                    <span class="combo-price">₱119</span>
+                    <span class="combo-save">Save ₱30!</span>
+                    <button class="add-btn">Add to Order</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="combo-item" data-name="Katsu Combo" data-price="169">
+                <div class="combo-images">
+                  <img src="images/Japanese/Japanese Foods/katsu.jpg" alt="Katsu" class="combo-food" onerror="this.src='https://via.placeholder.com/150?text=Katsu'">
+                  <img src="images/Japanese/Japanese Beverages/maesil.jpg" alt="Maesil" class="combo-drink" onerror="this.src='https://via.placeholder.com/150?text=Maesil'">
+                </div>
+                <div class="combo-info">
+                  <h4>🍛 Chicken Katsu + Maesil-cha</h4>
+                  <p class="combo-includes">Includes: Chicken Katsu (1) + Maesil-cha (1)</p>
+                  <div class="combo-footer">
+                    <span class="combo-price">₱169</span>
+                    <span class="combo-save">Save ₱30!</span>
+                    <button class="add-btn">Add to Order</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="combo-item" data-name="Kimchi Combo" data-price="89">
+                <div class="combo-images">
+                  <img src="images/Korean/Korean Foods/kimchi.jpg" alt="Kimchi" class="combo-food" onerror="this.src='https://via.placeholder.com/150?text=Kimchi'">
+                  <img src="images/Korean/Korean Beverages/sikhye.jpg" alt="Sikhye" class="combo-drink" onerror="this.src='https://via.placeholder.com/150?text=Sikhye'">
+                </div>
+                <div class="combo-info">
+                  <h4>🥬 Kimchi + Sikhye</h4>
+                  <p class="combo-includes">Includes: Kimchi (1) + Sikhye (1)</p>
+                  <div class="combo-footer">
+                    <span class="combo-price">₱89</span>
+                    <span class="combo-save">Save ₱25!</span>
+                    <button class="add-btn">Add to Order</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="combo-item" data-name="Bibimbap Combo" data-price="169">
+                <div class="combo-images">
+                  <img src="images/Korean/Korean Foods/bibimbap.jpg" alt="Bibimbap" class="combo-food" onerror="this.src='https://via.placeholder.com/150?text=Bibimbap'">
+                  <img src="images/Korean/Korean Beverages/omija.jpg" alt="Omija" class="combo-drink" onerror="this.src='https://via.placeholder.com/150?text=Omija'">
+                </div>
+                <div class="combo-info">
+                  <h4>🍚 Bibimbap + Omija</h4>
+                  <p class="combo-includes">Includes: Bibimbap (1) + Omija-cha (1)</p>
+                  <div class="combo-footer">
+                    <span class="combo-price">₱169</span>
+                    <span class="combo-save">Save ₱25!</span>
+                    <button class="add-btn">Add to Order</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="combo-item" data-name="Bulgogi Combo" data-price="189">
+                <div class="combo-images">
+                  <img src="images/Korean/Korean Foods/bulgogi.jpg" alt="Bulgogi" class="combo-food" onerror="this.src='https://via.placeholder.com/150?text=Bulgogi'">
+                  <img src="images/Korean/Korean Beverages/banana_milk.jpg" alt="Banana Milk" class="combo-drink" onerror="this.src='https://via.placeholder.com/150?text=Banana+Milk'">
+                </div>
+                <div class="combo-info">
+                  <h4>🥩 Bulgogi + Banana Milk</h4>
+                  <p class="combo-includes">Includes: Bulgogi (1) + Banana Milk (1)</p>
+                  <div class="combo-footer">
+                    <span class="combo-price">₱189</span>
+                    <span class="combo-save">Save ₱19!</span>
+                    <button class="add-btn">Add to Order</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="combo-item" data-name="Tteokbokki Combo" data-price="129">
+                <div class="combo-images">
+                  <img src="images/Korean/Korean Foods/tteokbokki.jpg" alt="Tteokbokki" class="combo-food" onerror="this.src='https://via.placeholder.com/150?text=Tteokbokki'">
+                  <img src="images/Korean/Korean Beverages/boricha.jpg" alt="Bori-cha" class="combo-drink" onerror="this.src='https://via.placeholder.com/150?text=Boricha'">
+                </div>
+                <div class="combo-info">
+                  <h4>🍡 Tteokbokki + Bori-cha</h4>
+                  <p class="combo-includes">Includes: Tteokbokki (1) + Bori-cha (1)</p>
+                  <div class="combo-footer">
+                    <span class="combo-price">₱129</span>
+                    <span class="combo-save">Save ₱15!</span>
+                    <button class="add-btn">Add to Order</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="combo-item" data-name="Japchae Combo" data-price="159">
+                <div class="combo-images">
+                  <img src="images/Korean/Korean Foods/japchae.jpg" alt="Japchae" class="combo-food" onerror="this.src='https://via.placeholder.com/150?text=Japchae'">
+                  <img src="images/Korean/Korean Beverages/milkis.jpg" alt="Milkis" class="combo-drink" onerror="this.src='https://via.placeholder.com/150?text=Milkis'">
+                </div>
+                <div class="combo-info">
+                  <h4>🍜 Japchae + Milkis</h4>
+                  <p class="combo-includes">Includes: Japchae (1) + Milkis (1)</p>
+                  <div class="combo-footer">
+                    <span class="combo-price">₱159</span>
+                    <span class="combo-save">Save ₱15!</span>
+                    <button class="add-btn">Add to Order</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          </div>
+        </div>
+
+        <aside class="cart-sidebar">
+          <div class="cart-header">
+            <h3>🛒 Your Order</h3>
+          </div>
+          <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Your cart is empty</p>
+          </div>
+          <div class="cart-footer">
+            <div class="cart-total">
+              <span>Total:</span>
+              <span id="cartTotal">₱0.00</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn" disabled>
+              Checkout
+            </button>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <div class="receipt-modal" id="receiptModal">
+      <div class="receipt-panel" id="receiptPanel">
+        <div class="receipt-header">
+          <span class="receipt-title">🧾 ORDER RECEIPT</span>
+          <button class="close-receipt" id="closeReceipt">&times;</button>
+        </div>
+        <div class="receipt-order-info">
+          <p>Order #: <strong id="orderNumber">--</strong></p>
+          <p>Date: <span id="orderDate">--</span></p>
+        </div>
+        <div class="receipt-items" id="receiptItems">
+        </div>
+        <div class="receipt-total">
+          <span>TOTAL:</span>
+          <span id="receiptTotal">₱0.00</span>
+        </div>
+        <div class="receipt-footer">
+          <p>Thank you for ordering!</p>
+          <p>JAKOR: Japanese x Korean Resto</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
